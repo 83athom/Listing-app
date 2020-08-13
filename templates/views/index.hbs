@@ -30,7 +30,7 @@
         <input placeholder="Address" id="txtAddress" name="address" required><br><br>
         <label>Contact Information:</label><br>
         <label for="txtEmail">Email:</label>
-        <input type="email" pattern="[A-Za-z]{1,}@[a-z]{1,}.[a-z]{3}" id="txtEmail" name="contact" autocomplete="on"><br><br>
+        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="txtEmail" name="contact" autocomplete="on"><br><br>
         <label for="txtPhone">Phone:</label>
         <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="txtPhone" name="contact"><br><br>
         <input type="submit" value="Add Item" formmethod="post">
