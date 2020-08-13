@@ -1,0 +1,50 @@
+<div id="map"></div>
+<div style="width:19%;float:right;text-align:left">
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+        <fieldset><legend>Available Items:</legend>
+        <ul id="listings"></ul>
+        <br>
+        </fieldset>
+<br><br><br><br>
+
+<form>
+        <fieldset><legend>Add Item to Listings:</legend>
+        <label for="txtTitle">Title:</label><br>
+        <input placeholder="Title" id="txtTitle" name="title" required> <br><br>
+        <label for="txtDes">Description:</label><br>
+        <textarea id="txtDes" name="description" style="width: 600px; height: 200px"></textarea><br><br>
+        <label for="txtName">Your Name:</label><br>
+        <input id="txtName" name="name"><br><br>
+        <label for="txtCat">Item Category:</label><br>
+        <input list="pic" id="txtCat" name="category" required>
+        <datalist id="pic">
+                <option value="Electronics">Electronics</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Other">Other</option>
+        </datalist><br><br>
+        <label for="txtPrice">Price:</label><br>
+        <input id="txtPrice" name="price" type="number" min="0" required><br><br>
+        <label for="txtAddress">Address:</label><br>
+        <input placeholder="Address" id="txtAddress" name="address" required><br><br>
+        <label>Contact Information:</label><br>
+        <label for="txtEmail">Email:</label>
+        <input type="email" pattern="[A-Za-z]{1,}@[a-z]{1,}.[a-z]{3}" id="txtEmail" name="contact" autocomplete="on"><br><br>
+        <label for="txtPhone">Phone:</label>
+        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="txtPhone" name="contact"><br><br>
+        <input type="submit" value="Add Item" formmethod="post">
+        <input type="reset" value="Reset">
+        </fieldset>
+</form>
+<br><br><br><br>
+<form>
+        <fieldset><legend>Delete Item from Listings:</legend>
+        <label for="txtID">Item ID:</label>
+        <input type="text" id="txtID" name="_id">
+        <input type="submit" value="Delete Item" formmethod="delete">
+        </fieldset>
+</form>
+<script src="/scripts/listings.js"></script>
+<script src="/scripts/newitem.js"></script>
+</div>
